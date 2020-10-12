@@ -1,17 +1,16 @@
 <?php
 
-/*
- * Esto es sólo un ESQUELETO para el ejercicio de la "distancia Hamming".
+/**
+ * @author Alonso Fernández Vidal
+ * @copyright Copyright (c) 2020 Alonso Fernández
+ * @license https://www.gnu.org/licenses/gpl-3.0.txt
  */
 
 function distancia($a, $b)
 {
-    //
-    // TU CÓDIGO VA AQUÍ
-    //
-
     if (mb_strlen($a) != mb_strlen($b))
     {
-
+        return false;
     }
+    return count(array_diff_assoc(mb_str_split($a), mb_str_split($b)));
 }
